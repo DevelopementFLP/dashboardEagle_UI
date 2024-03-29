@@ -1,0 +1,19 @@
+.dashTitle {
+    position: sticky;
+    background-color: #fff;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.noData {
+    color: gray;
+}
+
+.card {
+    background-color: rgba(244,246,246,0.7);
+}
+
+.scrolled {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

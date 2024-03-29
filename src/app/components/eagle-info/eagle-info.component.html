@@ -1,0 +1,13 @@
+<div class="card flex flex-column justify-content-center">
+    <p-card 
+        [header]="titulo"
+        [subheader]="subtitulo"
+    >
+    <div class="flex flex-row justify-content-between mb-3"><div class="text:sm sm:text-sm md:text-lg lg:text-xl">Lecturas:</div><div class="text:sm sm:text-sm md:text-lg lg:text-xl">{{dataEagle.length}}</div></div>
+    <div class="flex flex-row justify-content-between mb-3"><div class="text-sm sm:text-sm md:text-lg lg:text-xl">Rechazos:</div><div class="text:sm sm:text-sm md:text-lg lg:text-xl">{{getRechazos(dataEagle)}}</div></div>
+    <div class="flex flex-row justify-content-between mb-3"><div class="text-sm sm:text-sm md:text-lg lg:text-xl">No leídas:</div><div class="text:sm sm:text-sm md:text-lg lg:text-xl">{{getNoLeidos(dataEagle)}}</div></div>
+    <div class="flex flex-row justify-content-between mb-3"><div class="text-sm sm:text-sm md:text-lg lg:text-xl">% Rechazos:</div><div class="text:sm sm:text-sm md:text-lg lg:text-xl" *ngIf="dataEagle.length > 0">{{getRechazos(dataEagle) / dataEagle.length | percent:'0.0-2'}}</div><div class="text:sm sm:text-sm md:text-lg lg:text-xl" *ngIf="dataEagle.length == 0">0</div></div>
+    <div class="flex flex-row justify-content-between mb-3"><div class="text-sm sm:text-sm md:text-lg lg:text-xl">% No leidas:</div><div class="text:sm sm:text-sm md:text-lg lg:text-xl">{{getNoLeidos(dataEagle) / dataEagle.length | percent:'0.0-2'}}</div><div class="text:sm sm:text-sm md:text-lg lg:text-xl" *ngIf="dataEagle.length == 0">0</div></div>
+    </p-card>
+
+</div>
