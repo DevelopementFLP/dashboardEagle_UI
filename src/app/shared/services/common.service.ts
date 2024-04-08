@@ -66,7 +66,6 @@ export class CommonService {
             data.push(dataEagle.filter( d => { return  new Date(d.time) > today && new Date(d.time) < nextDay }))
         });
         
-        console.log(data)
         return data;
     }
 

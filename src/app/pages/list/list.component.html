@@ -1,15 +1,15 @@
 <div class="flex flex-column m-0">
     <div class="h-4rem font-bold text-3xl p-2 dashTitle">Dashboard Eagle</div>
-    <div class="flex flex-row flex-wrap mt-0 align-items-center justify-content-around card">
+    <!-- <div class="flex flex-row flex-wrap mt-0 align-items-center justify-content-around card" *ngIf="eagleWeekDataSmith1.length > 0">
         <div class="flex flex-row sm:col-12 md:col-8 lg:col-6">
             <div class="col-6"><eagle-info [titulo]="tiposEagle[0]" subtitulo="Hoy" [dataEagle]="eagleDayDataSmith1" /></div>
             <div class="col-6"><eagle-info [titulo]="tiposEagle[0]" subtitulo="Esta semana" [dataEagle]="eagleWeekDataSmith1" /></div>
         </div>
         <div class="sm:col-12 md:col-4 lg:col-6" *ngIf="eagleWeekDataSmith1.length > 0"><p-chart type="bar" [data]="chartDataSmith1" [options]="options" /></div>
         <div class="sm:col-12 md:col-4 lg:col-6 flex justify-content-center font-semibold text-2xl noData" *ngIf="eagleWeekDataSmith1.length == 0">No hay datos para graficar Smiths 1</div>
-    </div>
+    </div>-->
 
-    <div class="mt-5"></div>
+    <div class="mt-5"></div> 
     
     <div class="flex flex-row flex-wrap align-items-center justify-content-around card">
         <div class="flex flex-row sm:col-12 md:col-8 lg:col-6">
@@ -17,6 +17,17 @@
             <div class="col-6"><eagle-info [titulo]="tiposEagle[1]" subtitulo="Esta semana" [dataEagle]="eagleWeekDataSmith2" /></div>
         </div>
         <div class="sm:col-12 md:col-4 lg:col-6" *ngIf="eagleWeekDataSmith2.length > 0"><p-chart type="bar" [data]="chartDataSmith2" [options]="options" /></div>
-        <div class="sm:col-12 md:col-4 lg:col-6 flex justify-content-center font-semibold text-2xl noData" *ngIf="eagleWeekDataSmith2.length == 0">No hay datos para graficar Smiths 2</div>
+        <div class="sm:col-12 md:col-4 lg:col-6 flex justify-content-center font-semibold text-2xl noData" *ngIf="eagleWeekDataSmith2.length == 0">No hay datos para graficar en Desosado 1</div>
+    </div>
+
+    <div class="mt-5"></div>
+
+    <div class="flex flex-row flex-wrap align-items-center justify-content-around card">
+        <div class="flex flex-row sm:col-12 md:col-8 lg:col-6">
+            <div class="col-6"><eagle-info [titulo]="tiposEagle[2]" subtitulo="Hoy" [dataEagle]="eagleDayDataDesosado2" /></div>
+            <div class="col-6"><eagle-info [titulo]="tiposEagle[2]" subtitulo="Esta semana" [dataEagle]="eagleWeekDataDesosado2" /></div>
+        </div>
+        <div class="sm:col-12 md:col-4 lg:col-6" *ngIf="eagleWeekDataDesosado2.length > 0"><p-chart type="bar" [data]="chartDataDesosado2" [options]="options" /></div>
+        <div class="sm:col-12 md:col-4 lg:col-6 flex justify-content-center font-semibold text-2xl noData" *ngIf="eagleWeekDataDesosado2.length == 0">No hay datos para graficar en Desosado 2</div>
     </div>
 </div>
