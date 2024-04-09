@@ -1,3 +1,6 @@
+@import "../../../../node_modules/primeflex/primeflex.min.css";
+@import "../../../../node_modules/primeicons/primeicons.css";
+
 .dashTitle {
     position: sticky;
     background-color: #fff;
@@ -16,4 +19,13 @@
 
 .scrolled {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+i {
+    font-size: 2rem;
+}
+
+i:hover {
+    cursor: pointer;
+    color: #3498DB;
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CardModule } from 'primeng/card'
 import { ChartModule } from 'primeng/chart';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [],
@@ -13,7 +14,8 @@ import { ChartModule } from 'primeng/chart';
   ],
   exports:[ 
     CardModule,
-    ChartModule
+    ChartModule,
+    TooltipModule
   ]
 })
 export class PrimengModule { }

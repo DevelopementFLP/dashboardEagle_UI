@@ -199,4 +199,8 @@ export class ListComponent implements OnInit {
     else
       navbar?.classList.remove('scrolled');
   }
+
+  goSIR() {
+    window.location.href = "http://192.168.0.107:83"
+  }
 }
