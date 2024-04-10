@@ -23,16 +23,16 @@ export class EagleInfoComponent  implements OnInit {
   datosLecturas(dataEagle: EagleData[]): DatosLectura {
     let datos: DatosLectura = new DatosLectura()
     datos.lecturas = dataEagle.length;
-    datos.rechazos = dataEagle.filter( lectura => { return lectura.bankidx == 0 }).length;
-    datos.barcodesVacios = dataEagle.filter( lectura => { return lectura.barcode == ''}).length;
+    datos.rechazos = dataEagle.filter( lectura => { return lectura.bankidx === 0 }).length;
+    datos.barcodesVacios = dataEagle.filter( lectura => { return lectura.barcode === '' || lectura.barcode === '1000000000'}).length;
     return datos;
   }
 
   getRechazos(dataEagle: EagleData[]): number {
-    return dataEagle.filter( lectura => { return lectura.bankidx == 0 }).length;
+    return dataEagle.filter( lectura => { return lectura.bankidx === 0 }).length;
   }
 
   getNoLeidos(dataEagle: EagleData[]): number {
-    return dataEagle.filter( lectura => { return lectura.barcode == '' }).length;
+    return dataEagle.filter( lectura => { return lectura.barcode === '' || lectura.barcode === '1000000000' }).length;
   }
 }

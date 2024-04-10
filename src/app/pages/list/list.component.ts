@@ -164,7 +164,7 @@ export class ListComponent implements OnInit {
       /* DESOSADO 2 */
       this.apiService.getAll(firstDayOfWeekFormatted, headersNuevaEagle)
         .subscribe(data => {
-          console.log(data)
+          
           this.eagleDayDataDesosado2 = this.commonService.getFilteredData(data, todayFromFormatted);
           this.eagleWeekDataDesosado2 = data.data;
           this.chD2 = this.commonService.getDataByDate(this.eagleWeekDataDesosado2, this.daysOfWeek);
@@ -179,6 +179,7 @@ export class ListComponent implements OnInit {
               {
                 label: 'Rechazos',
                 data: this.commonService.getRechazoCount(this.chD2)
+                
               },
               {
                 label: 'No leidas',
@@ -186,12 +187,10 @@ export class ListComponent implements OnInit {
               }
             ]
           }
-
-        })
-
+        });
   }
 
-  // Comportamiento del navbar al hacer scroll
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const navbar = document.querySelector('.dashTitle');

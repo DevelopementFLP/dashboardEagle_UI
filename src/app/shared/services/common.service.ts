@@ -29,7 +29,6 @@ export class CommonService {
 
     getFilteredData(dataEagle: EagleResponse, day: string) : EagleData[] {
         const targetDate: Date = new Date(day);
-
         return dataEagle.data.filter(date => {
             const dataDate: Date = new Date(date.time);
             return dataDate >= targetDate;
@@ -49,11 +48,11 @@ export class CommonService {
     }
 
     getRechazos(dataEagle: EagleData[]): number {
-        return dataEagle.filter( lectura => { return lectura.bankidx == 0 }).length;
+        return dataEagle.filter( lectura => { return lectura.bankidx === 0 }).length;
       }
     
     getNoLeidos(dataEagle: EagleData[]): number {
-        return dataEagle.filter( lectura => { return lectura.barcode == '' }).length;
+        return dataEagle.filter( lectura => { return lectura.barcode === '' }).length;
     }
 
     getDataByDate(dataEagle: EagleData[], daysOfWeek: string[]): EagleData[][] {
@@ -80,18 +79,17 @@ export class CommonService {
 
     getRechazoCount(data: EagleData[][]): number[]{
         let n: number[] = [];
-    
         data.forEach(d => {
-            n.push( d.filter(x => { return x.bankidx == 0 }).length)
+            n.push( d.filter(x => { return x.bankidx === 0 }).length)
         });
         return n;
     }
 
     getNoReadCount(data: EagleData[][]): number[]{
         let n: number[] = [];
-    
+        console.log(data)
         data.forEach(d => {
-            n.push( d.filter(x => { return x.barcode == '' }).length)
+            n.push(d.filter(x => { return x.barcode === '' || x.barcode === '1000000000' }).length)
         });
         return n;
     }
