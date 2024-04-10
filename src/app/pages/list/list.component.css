@@ -9,6 +9,13 @@
     z-index: 999;
 }
 
+.title {
+    background-color: #fff;
+    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+
 .noData {
     color: gray;
 }

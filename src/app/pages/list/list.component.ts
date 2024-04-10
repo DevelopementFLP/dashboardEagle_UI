@@ -164,6 +164,7 @@ export class ListComponent implements OnInit {
       /* DESOSADO 2 */
       this.apiService.getAll(firstDayOfWeekFormatted, headersNuevaEagle)
         .subscribe(data => {
+          console.log(data)
           this.eagleDayDataDesosado2 = this.commonService.getFilteredData(data, todayFromFormatted);
           this.eagleWeekDataDesosado2 = data.data;
           this.chD2 = this.commonService.getDataByDate(this.eagleWeekDataDesosado2, this.daysOfWeek);
@@ -201,6 +202,6 @@ export class ListComponent implements OnInit {
   }
 
   goSIR() {
-    window.location.href = "http://192.168.0.107:83"
+    parent.location.href = "http://192.168.0.107:83";
   }
 }
